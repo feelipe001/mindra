@@ -23,8 +23,89 @@ body{
 width:100%;
 overflow-x:hidden;
 }</style><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"></head><body class="wp-singular page-template page-template-elementor_canvas page page-id-543 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-6 elementor-page elementor-page-543">
-	<div data-elementor-type="wp-page" data-elementor-id="543" class="elementor elementor-543"><div class="elementor-element elementor-element-da66221 e-con-full e-flex e-con e-parent" data-id="da66221" data-element_type="container" data-settings="{" background_background":"classic"}"=""><div class="elementor-element elementor-element-65d22640 elementor-widget__width-initial elementor-widget elementor-widget-image-box" data-id="65d22640" data-element_type="widget" data-widget_type="image-box.default"><div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">DECIFRE OLHARES, GESTOS E EXPRESSÕES- TENHA O <span style="color: #e7ad1c;"> PODER DE LER AS PESSOAS!</span></h3><p class="elementor-image-box-description">Descubra como a Linguagem Corporal esconde as verdades mais profundas e use esse poder para jamais ser manipulado ou enganado novamente.</p></div></div></div><div class="elementor-element elementor-element-4ebb6b79 elementor-widget__width-initial elementor-widget elementor-widget-html" data-id="4ebb6b79" data-element_type="widget" data-widget_type="html.default">
-<vturb-smartplayer id="vid-68750267a212daf5fbf98d7f" style="display: block; margin: 0 auto; width: 150% max-width: 1600px; "></vturb-smartplayer> <script type="litespeed/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/7cb5c4a4-0e54-4dd0-8220-3bf1c38f389c/players/68750267a212daf5fbf98d7f/v4/player.js",s.async=!0,document.head.appendChild(s)</script> </div></div><div class="elementor-element elementor-element-6c30e212 e-flex e-con-boxed e-con e-parent" data-id="6c30e212" data-element_type="container" data-settings="{" background_background":"classic"}"=""><div class="e-con-inner"><div class="elementor-element elementor-element-2a9b2f42 elementor-widget__width-initial elementor-widget elementor-widget-image-box" data-id="2a9b2f42" data-element_type="widget" data-widget_type="image-box.default"><div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Você não precisa ser  <span style="color: #e7ad1c;">ESPECIALISTA EM PSICOLOGIA</span></h3><p class="elementor-image-box-description">Não precisa decorar cada microexpressão facial ou passar anos estudando a mente humana.<br><br>
+	<div data-elementor-type="wp-page" data-elementor-id="543" class="elementor elementor-543"><div class="elementor-element elementor-element-da66221 e-con-full e-flex e-con e-parent" data-id="da66221" data-element_type="container" data-settings="{" background_background":"classic"}"=""><div class="elementor-element elementor-element-65d22640 elementor-widget__width-initial elementor-widget elementor-widget-image-box" data-id="65d22640" data-element_type="widget" data-widget_type="image-box.default"><div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">DECIFRE OLHARES, GESTOS E EXPRESSÕES - TENHA O <span style="color: #e7ad1c;"> PODER DE LER AS PESSOAS!</span></h3><p class="elementor-image-box-description">Descubra como a Linguagem Corporal esconde as verdades mais profundas e use esse poder para jamais ser manipulado ou enganado novamente.</p></div></div></div><div class="elementor-element elementor-element-4ebb6b79 elementor-widget__width-initial elementor-widget elementor-widget-html" data-id="4ebb6b79" data-element_type="widget" data-widget_type="html.default">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 0 auto;">
+    <iframe
+        id="youtube-vsl-player"
+        src="https://www.youtube.com/embed/_NTICMG0b5c?enablejsapi=1&controls=1&modestbranding=1&rel=0&showinfo=0&wmode=transparent"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    ></iframe>
+</div>
+
+<script>
+    // Carrega o framework do YouTube Player API
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-vsl-player', {
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    // Quando o player está pronto, remove o atributo 'title' para maior controle
+    function onPlayerReady(event) {
+        var iframe = document.getElementById('youtube-vsl-player');
+        if (iframe) {
+             // Opcional: Remove o título para evitar que o player abra a página do YouTube em alguns navegadores.
+            iframe.removeAttribute('title'); 
+        }
+    }
+
+    // Bloqueia o clique no player assim que o vídeo começar (estado 1: playing)
+    function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.PLAYING) {
+            var playerContainer = document.getElementById('youtube-vsl-player').parentNode;
+            var overlay = document.createElement('div');
+            overlay.style.position = 'absolute';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.zIndex = '10'; // Garante que fique acima
+            overlay.style.cursor = 'default';
+            
+            // Adiciona o overlay se ele ainda não existir
+            if (playerContainer.getElementsByClassName('click-blocker').length === 0) {
+                 overlay.className = 'click-blocker';
+                 playerContainer.appendChild(overlay);
+            }
+            
+            // Oculta o overlay após um breve período para permitir que os controles sejam usados
+            // durante a navegação normal do vídeo, mas bloqueia o clique na área do player.
+            setTimeout(function() {
+                var iframe = document.getElementById('youtube-vsl-player');
+                if (iframe) {
+                    iframe.style.pointerEvents = 'none'; // Bloqueia cliques no iframe
+                    // Mantém o overlay, mas com opacidade zero para ser totalmente invisível.
+                    if (playerContainer.querySelector('.click-blocker')) {
+                        playerContainer.querySelector('.click-blocker').style.opacity = '0';
+                    }
+                }
+            }, 500); // 500ms de delay
+            
+        } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+             // Quando pausado, habilita a interação novamente para o usuário poder clicar no play.
+             var iframe = document.getElementById('youtube-vsl-player');
+             if (iframe) {
+                iframe.style.pointerEvents = 'auto';
+                var blocker = iframe.parentNode.querySelector('.click-blocker');
+                if (blocker) {
+                    blocker.remove(); // Remove o bloqueador ao pausar
+                }
+             }
+        }
+    }
+</script> </div></div><div class="elementor-element elementor-element-6c30e212 e-flex e-con-boxed e-con e-parent" data-id="6c30e212" data-element_type="container" data-settings="{" background_background":"classic"}"=""><div class="e-con-inner"><div class="elementor-element elementor-element-2a9b2f42 elementor-widget__width-initial elementor-widget elementor-widget-image-box" data-id="2a9b2f42" data-element_type="widget" data-widget_type="image-box.default"><div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Você não precisa ser  <span style="color: #e7ad1c;">ESPECIALISTA EM PSICOLOGIA</span></h3><p class="elementor-image-box-description">Não precisa decorar cada microexpressão facial ou passar anos estudando a mente humana.<br><br>
 O CÓDIGO CORPORAL foi feito para pessoas que valorizam a verdade – mas que ainda não sabiam como traduzir os sinais que o corpo de todos emite o tempo todo.<br><br>
 <span style="font-weight: 600;">Se você consegue observar, eu te ajudo a decifrar a verdade com um método de 5 passos. </span></p></div></div></div><div class="elementor-element elementor-element-123001c4 e-con-full e-flex e-con e-child" data-id="123001c4" data-element_type="container"><div class="elementor-element elementor-element-2f7d001a e-con-full e-flex e-con e-child" data-id="2f7d001a" data-element_type="container" data-settings="{" background_background":"gradient"}"=""><div class="elementor-element elementor-element-7cd99bdf elementor-widget elementor-widget-heading" data-id="7cd99bdf" data-element_type="widget" data-widget_type="heading.default"><h2 class="elementor-heading-title elementor-size-default">O QUE A MAIORIA DAS PESSOAS
 <span style="font-weight: 600"><span style="color: #e7ad1c">ESCONDE COM APENAS UM OLHAR</span></span>?</h2></div><div class="elementor-element elementor-element-3a148cd3 elementor-align-left elementor-widget__width-initial elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3a148cd3" data-element_type="widget" data-widget_type="icon-list.default"><ul class="elementor-icon-list-items"><li class="elementor-icon-list-item">
